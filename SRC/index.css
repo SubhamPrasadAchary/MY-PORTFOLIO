@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400;
+  }
+  
+  .shiny-border {
+    @apply border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)];
+  }
+  
+  .shiny-border-hover {
+    @apply hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition-all duration-300;
+  }
+}
