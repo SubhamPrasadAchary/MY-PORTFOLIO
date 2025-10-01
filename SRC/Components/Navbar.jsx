@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeLink, setActiveLink] = useState('Home')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,35 +15,42 @@ const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#home', gradient: 'from-blue-500 to-cyan-500' },
+    { name: 'About', href: '#about', gradient: 'from-purple-500 to-pink-500' },
+    { name: 'Projects', href: '#projects', gradient: 'from-green-500 to-emerald-500' },
+    { name: 'Contact', href: '#contact', gradient: 'from-yellow-400 to-orange-500' },
   ]
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/90 backdrop-blur-sm border-b border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)] py-4' : 'bg-transparent py-6'
+        scrolled ? 'bg-black/95 backdrop-blur-md shadow-xl py-2' : 'bg-black/80 py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="text-2xl font-bold gradient-text">
+          <a 
+            href="#home" 
+            className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text hover:scale-110 transition-transform duration-300"
+          >
             SA
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-4 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium relative group"
+                onClick={() => setActiveLink(link.name)}
+                className={`px-5 py-3 rounded-xl text-lg font-bold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                  activeLink === link.name 
+                    ? `bg-gradient-to-r ${link.gradient} shadow-lg shadow-${link.gradient.split(' ')[1].split('-')[1]}-500/50`
+                    : 'bg-gray-800 hover:bg-gray-700'
+                }`}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)] group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>
@@ -50,7 +58,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-blue-400 transition-colors"
+            className="md:hidden p-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:scale-105 transition-transform"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -58,13 +66,20 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-slide-up">
+          <div className="md:hidden mt-4 pb-4 space-y-3 animate-slide-up">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block py-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                onClick={() => {
+                  setIsOpen(false)
+                  setActiveLink(link.name)
+                }}
+                className={`block w-full text-center py-4 px-6 rounded-xl text-lg font-bold text-white transition-all duration-300 ${
+                  activeLink === link.name 
+                    ? `bg-gradient-to-r ${link.gradient} shadow-lg`
+                    : 'bg-gray-800 hover:bg-gray-700'
+                }`}
               >
                 {link.name}
               </a>
