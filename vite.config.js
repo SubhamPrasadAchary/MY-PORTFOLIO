@@ -1,15 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { fileURLToPath, URL } from 'url';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  root: '.', // Explicitly set root directory
-  publicDir: 'public', // Ensure public directory is correctly set
+  root: fileURLToPath(new URL('.', import.meta.url)),
+  publicDir: fileURLToPath(new URL('public', import.meta.url)),
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
   build: {
@@ -20,9 +19,7 @@ export default defineConfig({
     minify: 'terser',
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html')
-      },
+      input: fileURLToPath(new URL('index.html', import.meta.url)),
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
@@ -39,4 +36,4 @@ export default defineConfig({
     port: 3000,
     open: true
   }
-})
+});
