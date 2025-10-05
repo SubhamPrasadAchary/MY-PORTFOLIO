@@ -37,7 +37,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="relative min-h-screen w-full py-20 px-4 sm:px-8 lg:px-12">
+    <section id="projects" className="relative min-h-screen w-full py-8 px-4 sm:px-8 lg:px-12">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-purple-900/30 to-gray-900/30 -z-10"></div>
       <div className="w-full max-w-8xl mx-auto">
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-20">

@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 // Import the profile image with a fallback
-import profileImage from '../assets/images/profile.jpg';
+import profileImage from '/avatar.png';
 
 const Hero = () => {
   return (
