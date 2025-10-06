@@ -9,8 +9,8 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
-      <div className="bg-gradient-to-b from-black/30 to-transparent">
-        <Navbar />
+      <div className="bg-gradient-to-b from-black/30 to-transparent flex flex-col">
+        {/* <Navbar /> */}
         <Hero />
         <About />
         <Projects />

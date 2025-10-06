@@ -45,7 +45,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="pt-0 px-4 sm:px-6 lg:px-8 -mt-40 relative">
+    <section id="about" className="pt-0 px-4 sm:px-6 lg:px-8 mt-8 flex">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-transparent -z-10"></div>
       <div className="max-w-7xl mx-auto py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
@@ -127,12 +127,12 @@ const About = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-xl border border-blue-500/20">
+            {/* <div className="mt-8 p-6 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-xl border border-blue-500/20">
               <h4 className="text-xl font-bold text-white mb-3">Note:</h4>
               <p className="text-gray-300">
                 Please add your school and university logo images in the <code className="bg-black/50 px-2 py-1 rounded">public/images/education/</code> directory with filenames <code className="bg-black/50 px-2 py-1 rounded">Amity_University_logo.png</code> and <code className="bg-black/50 px-2 py-1 rounded">mbiis-logo.png</code> for them to appear in the education section.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
