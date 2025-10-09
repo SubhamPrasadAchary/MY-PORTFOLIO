@@ -3,19 +3,19 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 
 
 
-# Frontend: 
+# Frontend
 React.js, Vite
 
-# Styling: 
+# Styling
 Tailwind CSS
 
-# Icons: 
+# Icons
 React Icons
 
-# Animations: 
+# Animations
 Custom CSS animations
 
-# Deployment: 
+# Deployment
 Vercel
 
 <img width="910" height="439" alt="image" src="https://github.com/user-attachments/assets/d8a11754-274a-4e3d-9527-f8dbc41369fc" />
