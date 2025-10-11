@@ -20,4 +20,5 @@ Vercel
 
 <img width="910" height="439" alt="image" src="https://github.com/user-attachments/assets/d8a11754-274a-4e3d-9527-f8dbc41369fc" />
 
-<img width="910" height="946" alt="image" src="https://github.com/user-attachments/assets/029f803f-3836-4962-a4f7-cb9003d93919" />
+<img width="910" height="843" alt="image" src="https://github.com/user-attachments/assets/ac93dfbb-22ef-4392-ade3-32e12ba349fe" />
+
