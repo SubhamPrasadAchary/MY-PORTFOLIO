@@ -1,7 +1,7 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 // Import the profile image with a fallback
-import profileImage from '/avatar.png';
+import profileImage from "/avatar.png";
 
 const Hero = () => {
   return (
@@ -22,7 +22,8 @@ const Hero = () => {
                   className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white/10 shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/400x400/1a1a2e/ffffff?text=Profile+Photo';
+                    e.target.src =
+                      "https://via.placeholder.com/400x400/1a1a2e/ffffff?text=Profile+Photo";
                   }}
                 />
               </div>
@@ -31,8 +32,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="space-y-6 animate-slide-up bg-black/50 p-8 rounded-2xl shiny-border shiny-border-hover order-1 md:order-2">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-              Hi, I'm{' '}
-              <span className="gradient-text">Subham </span>
+              Hi, I'm <span className="gradient-text">Subham </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300">
               I build exceptional digital experiences
@@ -87,6 +87,6 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
-export default Hero
+  );
+};
+export default Hero;

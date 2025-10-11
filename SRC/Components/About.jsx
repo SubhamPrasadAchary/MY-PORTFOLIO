@@ -1,51 +1,54 @@
-import { FaGraduationCap, FaSchool, FaUniversity } from 'react-icons/fa';
+import { FaGraduationCap, FaSchool, FaUniversity } from "react-icons/fa";
 
 const About = () => {
   const skills = [
-    'React',
-    'JavaScript',
-    'TypeScript',
-    'Node.js',
-    'Python',
-    'Tailwind CSS',
-    'MongoDB',
-    'PostgreSQL',
-    'Git',
-    'Docker',
-  ]
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Python",
+    "Tailwind CSS",
+    "MongoDB",
+    "PostgreSQL",
+    "Git",
+    "Docker",
+  ];
 
   const education = [
     {
       id: 1,
-      degree: 'B.Tech in Computer Science',
-      institution: 'Amity University',
-      duration: '2022 - 2026',
-      score: 'CGPA: 7.2',
-      image: '/images/education/Amity_University_logo.png',
-      icon: <FaUniversity className="text-blue-400 text-2xl" />
+      degree: "B.Tech in Computer Science",
+      institution: "Amity University",
+      duration: "2022 - 2026",
+      score: "CGPA: 7.2",
+      image: "/education/Amity_University_logo.png",
+      icon: <FaUniversity className="text-blue-400 text-2xl" />,
     },
     {
       id: 2,
-      degree: 'Class 12th (CBSE)',
-      institution: 'Manav Bharati India International School',
-      duration: '2020 - 2021',
-      score: 'Percentage: 79.6%',
-      image: '/images/education/mbiis-logo.png',
-      icon: <FaSchool className="text-green-400 text-2xl" />
+      degree: "Class 12th (CBSE)",
+      institution: "Manav Bharati India International School",
+      duration: "2020 - 2021",
+      score: "Percentage: 79.6%",
+      image: "/education/mbiis-logo.png",
+      icon: <FaSchool className="text-green-400 text-2xl" />,
     },
     {
       id: 3,
-      degree: 'Class 10th (CBSE)',
-      institution: 'Manav Bharati India International School',
-      duration: '2018 - 2019',
-      score: 'Percentage: 86.8%',
-      image: '/images/education/mbiis-logo.png',
-      icon: <FaSchool className="text-green-400 text-2xl" />
-    }
-  ]
+      degree: "Class 10th (CBSE)",
+      institution: "Manav Bharati India International School",
+      duration: "2018 - 2019",
+      score: "Percentage: 86.8%",
+      image: "/education/mbiis-logo.png",
+      icon: <FaSchool className="text-green-400 text-2xl" />,
+    },
+  ];
 
   return (
-    <section id="about" className="pt-0 px-4 sm:px-6 lg:px-8 mt-8 flex">
+    <section
+      id="about"
+      className="pt-0 px-4 sm:px-6 lg:px-8 mt-8 flex"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-transparent -z-10"></div>
       <div className="max-w-7xl mx-auto py-20">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
@@ -76,7 +79,9 @@ const About = () => {
 
             {/* Skills */}
             <div className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-xl">
-              <h3 className="text-2xl font-bold mb-6 text-white">Skills & Technologies</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">
+                Skills & Technologies
+              </h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <span
@@ -98,26 +103,55 @@ const About = () => {
             </h3>
             <div className="space-y-6">
               {education.map((edu) => (
-                <div 
+                <div
                   key={edu.id}
                   className="flex flex-col md:flex-row gap-6 p-6 bg-gray-900/50 rounded-xl border border-white/5 hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-gradient-to-br from-blue-900/50 to-cyan-900/50 flex items-center justify-center border border-white/10">
-                    {edu.icon}
+                    <img
+                      src={edu.image}
+                      className="h-12 w-12 rounded-full"
+                    />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-xl font-bold text-white">{edu.degree}</h4>
-                    <p className="text-blue-300 font-medium">{edu.institution}</p>
+                    <h4 className="text-xl font-bold text-white">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-blue-300 font-medium">
+                      {edu.institution}
+                    </p>
                     <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-300">
                       <span className="flex items-center">
-                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
                         </svg>
                         {edu.duration}
                       </span>
                       <span className="flex items-center">
-                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg
+                          className="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
                         </svg>
                         {edu.score}
                       </span>
@@ -137,7 +171,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

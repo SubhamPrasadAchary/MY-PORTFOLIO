@@ -8,7 +8,6 @@ const Projects = () => {
         'LiveFit is a smart calorie and nutrition tracker that simplifies healthy living.',
       technologies: ['JavaScript', 'CSS', 'MongoDB', 'HTML'],
       github: 'https://github.com/SubhamPrasadAchary/LIVEFIT.git',
-    
     },
     {
       title: 'RUMBLE-ROULETTE',
