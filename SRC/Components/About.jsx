@@ -1,5 +1,6 @@
 import { FaGraduationCap, FaSchool, FaUniversity } from 'react-icons/fa';
-
+import amityLogo from '../assets/amity-logo.jpg';
+import manavbharatiLogo from '../assets/manavbharati-logo.jpg';
 const About = () => {
   const skills = [
     'React',
@@ -21,8 +22,8 @@ const About = () => {
       institution: 'Amity University',
       duration: '2022 - 2026',
       score: 'CGPA: 7.2',
-      image: '/images/education/Amity_University_logo.png',
-      icon: <FaUniversity className="text-blue-400 text-2xl" />
+      logo: amityLogo,
+      alt: 'Amity University Logo'
     },
     {
       id: 2,
@@ -30,8 +31,8 @@ const About = () => {
       institution: 'Manav Bharati India International School',
       duration: '2020 - 2021',
       score: 'Percentage: 79.6%',
-      image: '/images/education/mbiis-logo.png',
-      icon: <FaSchool className="text-green-400 text-2xl" />
+      logo: manavbharatiLogo,
+      alt: 'Manav Bharati School Logo'
     },
     {
       id: 3,
@@ -39,8 +40,8 @@ const About = () => {
       institution: 'Manav Bharati India International School',
       duration: '2018 - 2019',
       score: 'Percentage: 86.8%',
-      image: '/images/education/mbiis-logo.png',
-      icon: <FaSchool className="text-green-400 text-2xl" />
+      logo: manavbharatiLogo,
+      alt: 'Manav Bharati School Logo'
     }
   ]
 
@@ -102,8 +103,12 @@ const About = () => {
                   key={edu.id}
                   className="flex flex-col md:flex-row gap-6 p-6 bg-gray-900/50 rounded-xl border border-white/5 hover:border-blue-500/30 transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-gradient-to-br from-blue-900/50 to-cyan-900/50 flex items-center justify-center border border-white/10">
-                    {edu.icon}
+                  <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-white/5 flex items-center justify-center p-2 border border-white/10">
+                    <img 
+                      src={edu.logo} 
+                      alt={edu.alt} 
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                   <div className="flex-1">
                     <h4 className="text-xl font-bold text-white">{edu.degree}</h4>
