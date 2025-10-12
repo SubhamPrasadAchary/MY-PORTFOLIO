@@ -58,29 +58,36 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-6 pt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/SubhamPrasadAchary"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                className="group relative text-gray-400 hover:text-blue-400 transition-all duration-300"
+                title="GitHub Profile"
               >
-                <FaGithub size={28} />
+                <FaGithub size={28} className="group-hover:scale-110 transition-transform" />
+                <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 group-hover:text-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300">GitHub</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/subhamachary"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                className="group relative text-gray-400 hover:text-blue-400 transition-all duration-300"
+                title="LinkedIn Profile"
               >
-                <FaLinkedin size={28} />
+                <FaLinkedin size={28} className="group-hover:scale-110 transition-transform" />
+                <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 group-hover:text-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300">LinkedIn</span>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/SubhamPrasadAc1"
                 target="_blank"
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                rel="noopener noreferrer"
+                className="group relative text-gray-400 hover:text-blue-400 transition-all duration-300"
+                title="Twitter Profile"
               >
-                <FaTwitter size={28} />
+                <FaTwitter size={28} className="group-hover:scale-110 transition-transform" />
+                <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 group-hover:text-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300">Twitter</span>
               </a>
             </div>
           </div>
