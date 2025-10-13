@@ -50,8 +50,16 @@ const Hero = () => {
                 Get In Touch
               </a>
               <a
+                href="https://drive.google.com/file/d/1Zb-BGdF-a6RWfDfFtwaXZZlprwqCTwrJ/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.5)] hover:shadow-[0_0_30px_rgba(99,102,241,0.7)] border-2 border-transparent hover:border-white/20"
+              >
+                View Resume
+              </a>
+              <a
                 href="#projects"
-                className="px-8 py-3 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:shadow-[0_0_30px_rgba(236,72,153,0.7)] border-2 border-transparent hover:border-white/20"
               >
                 View My Work
               </a>
