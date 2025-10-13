@@ -18,7 +18,9 @@ Custom CSS animations
 # Deployment
 Vercel
 
-<img width="910" height="439" alt="image" src="https://github.com/user-attachments/assets/d8a11754-274a-4e3d-9527-f8dbc41369fc" />
+<img width="910" height="544" alt="image" src="https://github.com/user-attachments/assets/5f617d26-2f62-4df3-8f16-3000d654e1e6" />
+
+
 
 <img width="910" height="843" alt="image" src="https://github.com/user-attachments/assets/ac93dfbb-22ef-4392-ade3-32e12ba349fe" />
 
