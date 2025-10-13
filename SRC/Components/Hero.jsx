@@ -50,7 +50,7 @@ const Hero = () => {
                 Get In Touch
               </a>
               <a
-                href="https://drive.google.com/file/d/1Zb-BGdF-a6RWfDfFtwaXZZlprwqCTwrJ/view?usp=drive_link"
+                href="https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-globalnav-goto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.5)] hover:shadow-[0_0_30px_rgba(99,102,241,0.7)] border-2 border-transparent hover:border-white/20"
