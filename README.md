@@ -5,7 +5,6 @@ A bold, modern and fully-responsive portfolio crafted with React and Tailwind CS
 It’s more than a site — it’s my story in code:
 skills sharpened 🔧 | projects shipped 💼 | journey in progress 📈 | vision ahead 🔭
 
-
 # Frontend
 React.js, Vite
 
