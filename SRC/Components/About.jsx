@@ -14,7 +14,6 @@ const About = () => {
     'Git',
     'Docker',
   ]
-
   const education = [
     {
       id: 1,
