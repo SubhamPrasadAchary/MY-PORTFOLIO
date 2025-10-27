@@ -21,8 +21,5 @@ Custom CSS animations
 Vercel
 
 <img width="910" height="544" alt="image" src="https://github.com/user-attachments/assets/5f617d26-2f62-4df3-8f16-3000d654e1e6" />
-
-
-
 <img width="910" height="843" alt="image" src="https://github.com/user-attachments/assets/ac93dfbb-22ef-4392-ade3-32e12ba349fe" />
 
