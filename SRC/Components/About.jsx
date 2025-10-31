@@ -80,6 +80,13 @@ const About = () => {
       issuer: 'Cisco Networking Academy program',
       YEAR: '2025',
       skills: ['Network Fundamentals', 'IP Addressing', 'VLANs', 'Network Security', 'IoT Protocols', 'Subnetting', 'Network Troubleshooting']
+    },
+    {
+      id: 6,
+      name: ' MSME Cybersecurity Bootcamp',
+      issuer: 'MSME Develepment Centre',
+      YEAR: '2022',
+      skills: ['Cybersecurity Fundamentals', 'Network Security', 'Threat Analysis', 'Risk Management', 'Security Policies', 'Cyber Hygiene']
     }
   ]
 
