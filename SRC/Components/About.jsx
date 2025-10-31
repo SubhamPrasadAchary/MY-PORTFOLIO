@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaSchool, FaUniversity } from 'react-icons/fa';
+import { FaGraduationCap, FaSchool, FaUniversity, FaCertificate } from 'react-icons/fa';
 import amityLogo from '../assets/amity-logo.jpg';
 import manavbharatiLogo from '../assets/manavbharati-logo.jpg';
 const About = () => {
@@ -14,6 +14,7 @@ const About = () => {
     'Git',
     'Docker',
   ]
+
   const education = [
     {
       id: 1,
@@ -41,6 +42,44 @@ const About = () => {
       score: 'Percentage: 86.8%',
       logo: manavbharatiLogo,
       alt: 'Manav Bharati School Logo'
+    }
+  ]
+
+  const certificates = [
+    {
+      id: 1,
+      name: 'Web Development Intern',
+      issuer: 'Jabsz Gaming Studios LLP',
+      YEAR: '2025',
+      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'MongoDB']
+    },
+    {
+      id: 2,
+      name: 'Web Development Bootcamp',
+      issuer: 'Udemy',
+      YEAR: '2025',
+      skills: ['HTML', 'CSS','Tailwind CSS','JavaScript', 'React', 'MongoDB','MySql','Node.js']
+    },
+    {
+      id: 3,
+      name: 'Python for Data Science',
+      issuer: 'NPTEL',
+      YEAR: '2024',
+      skills: ['Python', 'Pandas', 'NumPy', 'Data Analysis']
+    },
+    {
+      id: 4,
+      name: 'Introduction to Internet of Things',
+      issuer: 'NPTEL',
+      YEAR: '2024',
+      skills: ['Embedded Systems', 'Arduino', 'Raspberry Pi', 'MQTT', 'IoT Protocols', 'Sensor Networks', 'Cloud Integration']
+    },
+    {
+      id: 5,
+      name: ' CCNAv7: Introduction to Networks',
+      issuer: 'Cisco Networking Academy program',
+      YEAR: '2025',
+      skills: ['Network Fundamentals', 'IP Addressing', 'VLANs', 'Network Security', 'IoT Protocols', 'Subnetting', 'Network Troubleshooting']
     }
   ]
 
@@ -131,16 +170,54 @@ const About = () => {
               ))}
             </div>
 
-            {/* <div className="mt-8 p-6 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-xl border border-blue-500/20">
-              <h4 className="text-xl font-bold text-white mb-3">Note:</h4>
-              <p className="text-gray-300">
-                Please add your school and university logo images in the <code className="bg-black/50 px-2 py-1 rounded">public/images/education/</code> directory with filenames <code className="bg-black/50 px-2 py-1 rounded">Amity_University_logo.png</code> and <code className="bg-black/50 px-2 py-1 rounded">mbiis-logo.png</code> for them to appear in the education section.
-              </p>
-            </div> */}
+            {/* Certificates Section */}
+            <div className="bg-black/30 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-xl mt-12">
+              <h3 className="text-3xl font-bold mb-8 text-center text-white">
+                <FaCertificate className="inline-block mr-3 text-blue-400" />
+                Certifications
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-700">
+                  <thead className="bg-gray-800/50">
+                    <tr>
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Certificate</th>
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Issuer</th>
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">YEAR</th>
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Skills</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-gray-900/50 divide-y divide-gray-700">
+                    {certificates.map((cert) => (
+                      <tr key={cert.id} className="hover:bg-gray-800/50 transition-colors duration-200">
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm font-medium text-white">{cert.name}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-blue-300">{cert.issuer}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-300">{cert.YEAR}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex flex-wrap gap-1">
+                            {cert.skills.map((skill, idx) => (
+                              <span key={idx} className="px-2 py-1 text-xs rounded-full bg-gray-700 text-gray-200">
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
 export default About
